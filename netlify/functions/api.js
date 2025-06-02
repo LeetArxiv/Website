@@ -2,9 +2,13 @@ import express, { Router } from "express";
 import serverless from "serverless-http";
 import bodyParser from "body-parser";
 import compression from "compression";
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+var __dirname = path.dirname(__filename);
 const app = express();
 const router = Router();
-const __dirname = import.meta.dirname;
 
 app.use(bodyParser.json());
 app.use(compression());
