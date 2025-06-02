@@ -2,11 +2,13 @@ import express, { Router } from "express";
 import serverless from "serverless-http";
 import bodyParser from "body-parser";
 import compression from "compression";
+import path from "path";
 
 const app = express();
 const router = Router();
 
 app.use(compression());
+
 app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, './', 'Pages',)));
 
