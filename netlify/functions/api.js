@@ -5,7 +5,7 @@ import compression from "compression";
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
+var __filename = fileURLToPath(import.meta.url);
 var __dirname = path.dirname(__filename);
 const app = express();
 const router = Router();
