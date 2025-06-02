@@ -9,6 +9,6 @@ app.use(bodyParser.json());
 
 router.get("/hello", (req, res) => res.send("Hello World!"));
 
-app.use("/", router);
+app.use("/home", router);
 
 export const handler = serverless(app);
