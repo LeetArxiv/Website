@@ -7,8 +7,6 @@ const router = Router();
 
 
 app.use(bodyParser.json());
-app.use(compression());
-
 router.get("/hello", (req, res) => res.send("Hello World!"));
 
 app.use("/", router);
