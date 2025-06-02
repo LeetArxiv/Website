@@ -10,8 +10,7 @@ app.use(bodyParser.json());
 app.use(compression());
 
 router.get("/hello", (req, res) => res.send("Hello World!"));
-router.get("/canvas", (req, res) => res.send("Hello World!"));
-
+router.get("/canvas", (req, res) => res.sendFile('CanvasPage/index.html'));
 app.use("/", router);
 
 export const handler = serverless(app);
